@@ -1,0 +1,32 @@
+<%- layout('layouts/notaMain.ejs') %>
+
+
+    <div class="container-sm" id="lista">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% notas.forEach((nota)=>{ %>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= nota.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= nota.description %>
+                            </p>
+                            <button type="button" class="btn btn-danger" id="delete"><a
+                                    href="/eliminarNota/<%= nota._id %>">Delete</a>
+                            </button>
+                            <button class="ejemplo">
+                                ejemplo
+                            </button>
+
+                            <button type="button" class="btn btn-warning" id="update"><a
+                                    href="/actualizarNota/<%= nota._id %>">Editar</a></button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    

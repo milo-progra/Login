@@ -1,0 +1,24 @@
+
+
+<%- layout('layouts/notaMain.ejs') %>
+
+    <div class="container">
+
+        <div class="container-sm"  id="formSignin">
+
+            <form action="/savenotas" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" name="title" placeholder="Ingresa un titulo">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Descripcion</label>
+                    <input type="text" class="form-control" name="description" placeholder="Ingresa la descripcion de la nota">
+                </div>
+                <div class="submit">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
